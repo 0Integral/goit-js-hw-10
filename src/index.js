@@ -11,10 +11,7 @@ const refs = {
   infoField: document.querySelector('.country-info'),
 };
 
-refs.inputUser.addEventListener(
-  'input',
-  debounce(onInputUser, DEBOUNCE_DELAY, { trailing: true })
-);
+refs.inputUser.addEventListener('input', debounce(onInputUser, DEBOUNCE_DELAY));
 
 function onInputUser(e) {
   const userSearch = e.target.value.trim();
